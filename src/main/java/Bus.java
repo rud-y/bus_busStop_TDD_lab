@@ -21,4 +21,9 @@ public class Bus {
             this.passengers.add(person);
         }
     }
+
+    public void removePassenger(Person person) {
+        int index = this.passengers.indexOf(person);
+        this.passengers.remove(index);
+    }
 }
