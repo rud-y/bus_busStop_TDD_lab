@@ -9,8 +9,12 @@ public class BusStop {
         this.queue = new ArrayList<Person>();
     }
 
-
     public String getName() {
         return this.name;
     }
+
+    public int getQueueLength() {
+        return this.queue.size();
+    }
+
 }

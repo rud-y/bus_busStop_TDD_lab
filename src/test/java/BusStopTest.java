@@ -17,4 +17,9 @@ public class BusStopTest {
     public void busStopHasName() {
         assertEquals("Haymarket", busStop.getName());
     }
+
+    @Test
+    public void busStopHasNoQueue() {
+        assertEquals(0, busStop.getQueueLength() );
+    }
 }
