@@ -27,4 +27,7 @@ public class Bus {
         this.passengers.remove(index);
     }
 
+    public void pickUpPassenger(BusStop busStop, Person person) {
+        this.passengers.add(busStop.remove(person));
+    }
 }

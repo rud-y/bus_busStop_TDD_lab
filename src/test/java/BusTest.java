@@ -9,12 +9,13 @@ public class BusTest {
 
     private Bus bus;
     private Person person;
+    private BusStop busStop;
 
     @Before
     public void before() {
         bus = new Bus("South Gyle", 80);
         person = new Person();
-
+        busStop = new BusStop("Haymarket");
     }
 
     @Test
@@ -42,6 +43,13 @@ public class BusTest {
         bus.addPassenger(person);
         bus.addPassenger(person);
         bus.removePassenger(person);
+        assertEquals(1, bus.getNumberOfPassengers());
+    }
+
+    @Test
+    public void canPickUpPassengerFromQueue() {
+        busStop.add(person);
+        bus.pickUpPassenger(busStop,person);
         assertEquals(1, bus.getNumberOfPassengers());
     }
 
