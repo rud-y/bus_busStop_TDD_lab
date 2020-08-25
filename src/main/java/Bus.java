@@ -12,7 +12,11 @@ public class Bus {
     }
 
 
-    public int getNumberPassengers() {
+    public int getNumberOfPassengers() {
         return this.passengers.size();
+    }
+
+    public void addPassenger(Person person) {
+        this.passengers.add(person);
     }
 }
