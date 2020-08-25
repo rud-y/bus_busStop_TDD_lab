@@ -37,6 +37,7 @@ public class BusStopTest {
         busStop.add(person);
         busStop.add(person2);
         busStop.remove(person);
+        assertEquals(1, busStop.getQueueLength());
     }
 
 
