@@ -26,4 +26,5 @@ public class Bus {
         int index = this.passengers.indexOf(person);
         this.passengers.remove(index);
     }
+
 }
